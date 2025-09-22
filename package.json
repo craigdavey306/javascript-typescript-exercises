@@ -1,0 +1,28 @@
+{
+  "name": "javascript-typescript-examples",
+  "version": "1.0.0",
+  "description": "JavaScript/Typescript Examples",
+  "main": "index.js",
+  "scripts": {
+    "test:all": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:anagrams": "npm run test:all exercises/anagrams/test.ts",
+    "test:capitalize": "npm run test:all exercises/capitalize/test.ts",
+    "test:fizzbuzz": "npm run test:all exercises/fizzbuzz/test.ts",
+    "test:maxchar": "npm run test:all exercises/maxchar/test.ts",
+    "test:palindrome": "npm run test:all exercises/palindrome/test.ts",
+    "test:pyramid": "npm run test:all exercises/pyramid/test.ts",
+    "test:reverse-string": "npm run test:al exercises/reverse-string/test.ts",
+    "test:vowels": "npm run test:all exercises/vowels/test.ts"
+  },
+  "keywords": [],
+  "author": "Craig Davey",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.1.3",
+    "ts-jest": "^29.4.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
