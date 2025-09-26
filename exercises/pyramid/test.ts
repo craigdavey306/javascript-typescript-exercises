@@ -16,11 +16,21 @@ describe('pyramid tests', () => {
     log.mockRestore();
   });
 
+  test('prints nothing when n is a negative number', () => {
+    pyramid(-1);
+    expect(log).not.toHaveBeenCalled();
+  });
+
+  test('prints nothing when n = 0', () => {
+    pyramid(0);
+    expect(log).not.toHaveBeenCalled();
+  });
+
   test('prints a pyramid for n = 1', () => {
     const n = 1;
 
     pyramid(n);
-    expect(log.mock.calls.length).toEqual(n);
+    expect(log).toHaveBeenCalledTimes(n);
     expect(log.mock.calls[0]?.[0]).toEqual('#');
   });
 
@@ -28,7 +38,7 @@ describe('pyramid tests', () => {
     const n = 2;
 
     pyramid(n);
-    expect(log.mock.calls.length).toEqual(n);
+    expect(log).toHaveBeenCalledTimes(n);
     expect(log.mock.calls[0]?.[0]).toEqual('#');
     expect(log.mock.calls[1]?.[0]).toEqual('##');
   });
@@ -37,7 +47,7 @@ describe('pyramid tests', () => {
     const n = 3;
 
     pyramid(n);
-    expect(log.mock.calls.length).toEqual(n);
+    expect(log).toHaveBeenCalledTimes(n);
     expect(log.mock.calls[0]?.[0]).toEqual('#');
     expect(log.mock.calls[1]?.[0]).toEqual('##');
     expect(log.mock.calls[2]?.[0]).toEqual('###');
@@ -48,7 +58,7 @@ describe('pyramid tests', () => {
 
     pyramid(n);
 
-    expect(log.mock.calls.length).toEqual(n);
+    expect(log).toHaveBeenCalledTimes(n);
     expect(log.mock.calls[0]?.[0]).toEqual('#');
     expect(log.mock.calls[1]?.[0]).toEqual('##');
     expect(log.mock.calls[2]?.[0]).toEqual('###');

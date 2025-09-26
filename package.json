@@ -11,7 +11,7 @@
     "test:maxchar": "npm run test:all exercises/maxchar/test.ts",
     "test:palindrome": "npm run test:all exercises/palindrome/test.ts",
     "test:pyramid": "npm run test:all exercises/pyramid/test.ts",
-    "test:reverse-string": "npm run test:al exercises/reverse-string/test.ts",
+    "test:reversestring": "npm run test:all exercises/reverse-string/test.ts",
     "test:vowels": "npm run test:all exercises/vowels/test.ts"
   },
   "keywords": [],
