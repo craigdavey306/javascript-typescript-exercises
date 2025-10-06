@@ -1,10 +1,13 @@
-import type { Config } from '@jest/types';
-
 // Sync object
-const config: Config.InitialOptions = {
+const config = {
   verbose: true,
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        useESM: true,
+      },
+    ],
   },
   extensionsToTreatAsEsm: ['.ts'],
   transformIgnorePatterns: ['/node_modules/'],
